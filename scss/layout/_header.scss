@@ -1,16 +1,67 @@
+@use '../abstract/mixin' as animate;
+@use '../abstract/mixin' as queries;
+
 header {
+  position: relative;
   background-image: url('../../assets/images/desktop/image-header.jpg');
   background-repeat: no-repeat;
-  background-size: 100%;
-  width: 100%;
+  //   background-attachment: fixed;
+  background-size: 100% auto;
+  //   background-size: 100%;
+  //   background-position: center;
+
   height: 100%;
+  //   width: 100%;
+  //   height: auto;
+  //   max-width: 100%;
+  //   max-height: 100vh;
+  border: 1px solid red;
+
+  @include queries.respond(screen-md) {
+    // height: 65%;
+    // padding-bottom: 6rem;
+    // height: 100%;
+
+    background-image: url('../../assets/images/mobile/image-header.jpg');
+
+    & .navigation__list {
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      background-color: var(--color-0010);
+      clip-path: polygon(0 7%, 94% 7%, 100% 0, 100% 100%, 0 100%);
+      flex-direction: column;
+      gap: 2rem;
+      margin: 0 1.5rem;
+      padding: 4rem 0 3.5rem 0;
+      z-index: 100;
+    }
+
+    & .navigation__list.hidden {
+      display: none;
+    }
+
+    & .navigation__hamburger__menu {
+      display: block;
+    }
+  }
 }
 
 .navigation {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 1.5rem;
+  padding: 3em 2em;
+
+  @include queries.respond(screen-md) {
+    padding: 2em 1.5em;
+  }
+}
+
+.navigation__hamburger__menu {
+  cursor: pointer;
+  display: none;
 }
 
 .navigation__list {
@@ -24,15 +75,21 @@ header {
 .navigation__link {
   color: var(--color-0010);
   text-decoration: none;
+
+  @include queries.respond(screen-md) {
+    color: var(--color-008);
+  }
 }
 
 .heading__container {
-  //   display: inline-block;
-  //   margin: 0 auto;
-  margin-top: 5rem;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  //   margin-bottom: 4rem;
 }
 
-.arrow-down {
-  margin: 0 auto;
+.arrow__down {
+  @include animate.animate-arrow;
 }

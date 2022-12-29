@@ -73,3 +73,11 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+//////////////////////////////
+/// //
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-0010);
+}

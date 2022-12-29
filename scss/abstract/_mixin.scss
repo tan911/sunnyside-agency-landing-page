@@ -1,0 +1,41 @@
+// QUERIES
+@mixin respond($breakpoint) {
+  @if $breakpoint == screen-md {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+}
+
+// ANIMATION
+@mixin animate-heading {
+  animation: fadeIn 1s ease-in-out;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@mixin animate-arrow {
+  animation: dropIn 5s ease;
+
+  @keyframes dropIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

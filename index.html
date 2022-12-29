@@ -10,13 +10,14 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <script defer src="./js/app.js"></script>
     <title>Frontendmentor | Sunny side</title>
   </head>
   <body>
     <header>
       <nav class="navigation">
         <img src="./assets/images/logo.svg" alt="" />
-        <ul class="navigation__list">
+        <ul class="navigation__list hidden">
           <li class="navigation__list__item">
             <a class="navigation__link" href="#">About</a>
           </li>
@@ -32,16 +33,47 @@
             >
           </li>
         </ul>
+        <div class="navigation__hamburger__menu">
+          <svg width="24" height="18" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z"
+              fill="#FFF"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
       </nav>
       <div class="heading__container">
-        <h1>WE ARE CREATIVES</h1>
-        <img
-          class="arrow-down"
-          src="./assets/images/icon-arrow-down.svg"
-          alt=""
-        />
+        <h1 class="u-text-center">WE ARE CREATIVES</h1>
+        <svg
+          class="arrow__down"
+          width="36"
+          height="114"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            stroke="#FFF"
+            stroke-width="6"
+            fill="none"
+            fill-rule="evenodd"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M18 3v100M3 95.484l15 15 15-15" />
+          </g>
+        </svg>
       </div>
     </header>
-    <main></main>
+    <main>
+      <section class="section__services">
+        <h2>Transform your brand</h2>
+        <p>
+          We are a full-service creative agency specializing in helping brands
+          grow fast. Engage your clients through compelling visuals that do most
+          of the marketing for you.
+        </p>
+        <a href="#">Learn more</a>
+      </section>
+    </main>
   </body>
 </html>

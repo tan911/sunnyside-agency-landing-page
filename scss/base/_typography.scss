@@ -1,3 +1,6 @@
+@use '../abstract/mixin' as animate;
+@use '../abstract/mixin' as queries;
+
 @font-face {
   font-family: customFont900;
   src: url('../../assets/font/Fraunces_9pt-Black.ttf');
@@ -22,9 +25,14 @@ a {
 }
 
 h1 {
-  font-size: clamp(1.125rem, calc(4.998vw + 0.788rem), 3.75rem);
-  margin-bottom: 7rem;
+  font-size: clamp(2.125rem, calc(2.499vw + 1.188rem), 3.438rem);
+  margin-top: 1em;
+  margin-bottom: 1.7em;
   color: var(--color-0010);
   font-family: customFont900, serif;
   letter-spacing: 0.5rem;
+  @include animate.animate-heading;
 }
+
+// font-size: clamp(0.938rem, calc(0.357vw + 0.804rem), 1.125rem);
+// font-size: clamp(1.125rem, calc(3.808vw + 0.527rem), 3.438rem);
