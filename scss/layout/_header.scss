@@ -1,0 +1,38 @@
+header {
+  background-image: url('../../assets/images/desktop/image-header.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1.5rem;
+}
+
+.navigation__list {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  list-style-type: none;
+  padding: 0;
+}
+
+.navigation__link {
+  color: var(--color-0010);
+  text-decoration: none;
+}
+
+.heading__container {
+  //   display: inline-block;
+  //   margin: 0 auto;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.arrow-down {
+  margin: 0 auto;
+}

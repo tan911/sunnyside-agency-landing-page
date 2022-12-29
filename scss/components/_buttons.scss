@@ -1,0 +1,16 @@
+.navigation__link__btn:link,
+.navigation__link__btn:visited {
+  color: var(--color-004);
+  background-color: var(--color-0010);
+  font-family: customFont700, serif;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  transition: all 0.3s;
+}
+
+.navigation__link__btn:hover,
+.navigation__link__btn:active {
+  background-color: hsla(0, 0%, 100%, 0.253);
+  color: var(--color-0010);
+}

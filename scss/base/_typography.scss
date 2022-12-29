@@ -1,0 +1,30 @@
+@font-face {
+  font-family: customFont900;
+  src: url('../../assets/font/Fraunces_9pt-Black.ttf');
+}
+
+@font-face {
+  font-family: customFont700;
+  src: url('../../assets/font/Fraunces_9pt-Bold.ttf');
+}
+
+@font-face {
+  font-family: customFont600;
+  src: url('../../assets/font/Barlow-SemiBold.ttf');
+}
+
+header {
+  font-family: customFont600, sans-serif;
+}
+
+a {
+  font-size: 1.125rem;
+}
+
+h1 {
+  font-size: clamp(1.125rem, calc(4.998vw + 0.788rem), 3.75rem);
+  margin-bottom: 7rem;
+  color: var(--color-0010);
+  font-family: customFont900, serif;
+  letter-spacing: 0.5rem;
+}
