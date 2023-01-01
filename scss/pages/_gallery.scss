@@ -1,4 +1,50 @@
-.section__gallery {
+@use '../abstract/mixin' as queries;
+
+.gallery {
+  grid-column: full-start / full-end;
+
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+
+  &__1,
+  &__2,
+  &__3,
+  &__4 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  &__1 {
+    background-image: url('../assets/images/desktop/image-gallery-milkbottles.jpg');
+
+    @include queries.respond(screen-sm) {
+      background-image: url('../assets/images/mobile/image-gallery-milkbottles.jpg');
+    }
+  }
+  
+  &__2 {
+    background-image: url('../assets/images/desktop/image-gallery-orange.jpg');
+
+    @include queries.respond(screen-sm) {
+      background-image: url('../assets/images/mobile/image-gallery-orange.jpg');
+    }
+  }
+
+  &__3 {
+    background-image: url('../assets/images/desktop/image-gallery-cone.jpg');
+
+    @include queries.respond(screen-sm) {
+      background-image: url('../assets/images/mobile/image-gallery-cone.jpg');
+    }
+  }
+
+  &__4 {
+    background-image: url('../assets/images/desktop/image-gallery-sugarcubes.jpg');
+
+    @include queries.respond(screen-sm) {
+      background-image: url('../assets/images/mobile/image-gallery-sugar-cubes.jpg');
+    }
+  }
 }
+

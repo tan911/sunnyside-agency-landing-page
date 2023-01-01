@@ -1,42 +1,66 @@
-.wrapper {
-  background-color: #eee;
-  // border: 2px solid blue;
+// @use '../abstract/mixin' as queries;
 
-  display: grid;
-  grid-template-rows: 0.279fr 1fr 0.15fr;
+.header {
+  background-color: red;
+  grid-column: full-start / full-end;
+  grid-row: 1 / 2;
 }
 
-.item {
-  color: black;
+// .header {
+//   background-color: red;
+//   grid-row: 1 / 2;
+//   grid-column: full-start / full-end;
+// }
 
-  &__main {
-    display: grid;
-    grid-template-rows: 0.5fr 0.5fr 0.6fr 0.4fr;
-  }
+// .wrapper {
+//   // background-color: #eee;
+//   // border: 2px solid blue;
 
-  // &__footer {
-  //   background-color: blue;
-  // }
-}
+//   display: grid;
+//   grid-template-rows: 0.279fr 1fr 0.15fr;
+//   // grid-template-rows: 1fr 1fr 0.1fr;
 
-.item__header {
-  background-image: url('../../assets/images/desktop/image-header.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
+//   // grid-template-rows: repeat(auto-fit, minmax(800px, 1fr));
+//   // @include queries.respond(screen-md) {
+//   //   grid-template-columns: 0.2fr;
+//   // }
+// }
 
-.hero__primary__heading {
-  margin-bottom: 5rem;
-}
+// .item {
+//   &__main {
+//     display: grid;
+//     grid-template-rows: 0.5fr 0.5fr 0.6fr 0.3fr;
 
-.hero__arrow__down {
-  margin: 0 auto;
-}
+//     // @include queries.respond(screen-md) {
+//     //   grid-template-rows: 1fr;
+//     // }
+//   }
+// }
 
-.section {
-  background-color: #eee;
-}
+// .item__header {
+//   background-image: url('../../assets/images/desktop/image-header.jpg');
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center center;
+
+//   @include queries.respond(screen-md) {
+//     background-image: url('../../assets/images/mobile/image-header.jpg');
+//     // background-size: contain;
+//     // background-position: center;
+//   }
+// }
+
+// .hero__primary__heading {
+//   margin-bottom: 5rem;
+// }
+
+// .hero__arrow__down {
+//   margin: 0 auto;
+// }
+
+// .section {
+//   background-color: #eee;
+// }
 
 // .section__services {
 //   display: grid;

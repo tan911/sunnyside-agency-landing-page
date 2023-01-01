@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch:sass": "sass --watch scss/app.scss css/style.css --style compressed",
-    "devstart": "live-server",
+    "devstart": "live-server --browser=firefox",
     "start": "npm-run-all --parallel devstart watch:sass"
   },
   "keywords": [],

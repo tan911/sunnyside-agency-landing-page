@@ -1,37 +1,111 @@
-.section__design {
+@use '../abstract/mixin' as queries;
+
+.product {
+  grid-column: full-start / full-end;
+
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(min-content, 1fr));
+
+  // &__graphic,
+  // &__photography {
+  //   justify-self: flex-end;
+  // }
+
+  &__graphic {
+    // background-color: green;
+
+    background-image: url('../assets/images/desktop/image-graphic-design.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    
+    
+    padding: 0 13vw 3em 13vw;
+    // padding-bottom: 2em;
+    
+    @include queries.respond(screen-sm) {
+      background-image: url('../assets/images/mobile/image-graphic-design.jpg');
+      padding: 0 5vw 2em 5vw;
+    }
+  }
+
+  &__photography {
+    // grid-column: col-start 4 / full-end;
+
+    background-image: url('../assets/images/desktop/image-photography.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    
+    padding: 0 13vw 3em 13vw;
+    // padding-bottom: 2em;
+
+
+    @include queries.respond(screen-sm) {
+      background-image: url('../assets/images/mobile/image-photography.jpg');
+      padding: 0 5vw 2em 5vw;
+    }
+  }
 }
 
-.design__001,
-.design__002 {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+// .section__design {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-}
+//   @include queries.respond(screen-md) {
+//     grid-template-columns: 1fr;
+//   }
+// }
 
-.design__001 {
-  background-image: url('../../assets/images/desktop/image-graphic-design.jpg');
-}
+// .design__001,
+// .design__002 {
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center center;
 
-.design__002 {
-  background-image: url('../../assets/images/desktop/image-photography.jpg');
-}
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: flex-end;
+// }
 
-.design__001__container,
-.design__002__container {
-  //   border: 1px solid red;
-  height: 50%;
-  width: 55%;
-  padding: 1rem;
+// .design__001 {
+//   background-image: url('../../assets/images/desktop/image-graphic-design.jpg');
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+//   @include queries.respond(screen-md) {
+//     background-image: url('../../assets/images/mobile/image-graphic-design.jpg');
+//   }
+// }
+
+// .design__002 {
+//   background-image: url('../../assets/images/desktop/image-photography.jpg');
+
+//   @include queries.respond(screen-md) {
+//     background-image: url('../../assets/images/mobile/image-photography.jpg');
+//   }
+// }
+
+// .design__001__container,
+// .design__002__container {
+//   border: 1px solid red;
+//   height: 50%;
+//   width: 55%;
+//   padding: 1rem;
+
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+// }

@@ -1,112 +1,247 @@
-// @use '../abstract/mixin' as animate;
-// @use '../abstract/mixin' as queries;
+// // @use '../abstract/mixin' as animate;
+// // @use '../abstract/mixin' as queries;
+@use '../abstract/variables' as font;
 
 @font-face {
-  font-family: customFont900;
-  src: url('../../assets/font/Fraunces_9pt-Black.ttf');
+    font-family: customFont900;
+    src: url('../../assets/font/Fraunces_9pt-Black.ttf');
+  }
+  
+  @font-face {
+    font-family: customFont700;
+    src: url('../../assets/font/Fraunces_9pt-Bold.ttf');
+  }
+  
+  @font-face {
+    font-family: customFont600;
+    src: url('../../assets/font/Barlow-SemiBold.ttf');
+  }
+  
+
+%heading {
+    font-family: customFont900, serif;
 }
 
-@font-face {
-  font-family: customFont700;
-  src: url('../../assets/font/Fraunces_9pt-Bold.ttf');
+%paragraph {
+    font-family: customFont600, sans-serif
 }
 
-@font-face {
-  font-family: customFont600;
-  src: url('../../assets/font/Barlow-SemiBold.ttf');
+
+.heading--1 {
+    @extend %heading;
 }
 
-.navigation__link {
-  font-family: customFont600, sans-serif;
-  color: var(--color-0010);
-  font-size: 1.125rem;
+
+.heading--2 {
+    @extend %heading;
+    font-size: font.$font-size-md;
+    font-weight: 700;
+    color: var(--color-006);
 }
 
-.hero__primary__heading {
-  font-family: CustomFont900, serif;
-  color: var(--color-0010);
-  //   font-size: clamp(2.125rem, calc(2.499vw + 1.188rem), 3.438rem);
-  font-size: 4.376rem;
-  letter-spacing: 0.5rem;
+
+.heading--3 {
+    @extend %heading;
+    font-size: font.$font-size-sm;
+
+    &__emerald {
+        color: var(--color-003)
+    }
+
+    &__dark {
+        color: var(--color-006)
+    }
 }
 
-.secondary__heading {
-  font-family: customFont700, serif;
-  color: var(--color-006);
-  font-size: 2rem;
-  font-weight: bold;
-  width: 75%;
+
+
+.heading--4 {
+    font-family: customFont700, serif;
+    font-size: 1.2rem;
+    color: var(--color-009);
+    letter-spacing: 4px;
+    text-transform: uppercase
 }
 
-.text__message {
-  font-family: customFont600, sans-serif;
-  font-size: 1.01rem;
-  color: var(--color-008);
+
+.heading--5 {
+    @extend %heading;
+    color: var(--color-006);
+    font-size: 1.0125rem
 }
 
-.text__message__services {
-  width: 80%;
+
+.p-text-sm {
+    @extend %paragraph;
+    color: var(--color-009);
+    font-size: 0.938rem
 }
 
-.secondary__heading,
-.text__message__services {
-  margin-bottom: 1.5rem;
+
+.p-text {
+    @extend %paragraph;
+    font-size: font.$font-size-xs;
+    
+    &__slate {
+        color: var(--color-008);
+    }
+
+    &__emerald {
+        color: var(--color-003);
+    }
+
+    &__dark {
+        color: var(--color-006);
+    }
+
+    &__gray {
+        color: var(--color-007);
+    }
 }
 
-.highlight__text__001,
-.highlight__text__002 {
-  font-family: customFont900, sans-serif;
-  text-transform: uppercase;
-  color: var(--color-006);
+
+
+.highlight-text {
+    @extend %heading;
+    color: var(--color-006);
+    font-size: 0.938rem;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &__001 {
+        position: relative;
+
+        &::before {
+            /* Highlight color */
+            background-color: var(--highlight--1);
+
+            content: '';
+            position: absolute;
+            width: calc(100% + 10px);
+            height: 45%;
+            left: -2px;
+            bottom: -2px;
+            z-index: -1;
+            transform: translateY(-10deg);
+        }
+    }
+
+    &__002 {
+        position: relative;
+
+        &::before {
+            /* Highlight color */
+            background-color: var(--highlight--2);
+                
+            content: '';
+            position: absolute;
+            width: calc(100% + 10px);
+            height: 45%;
+            left: -2px;
+            bottom: -2px;
+            z-index: -1;
+            transform: transform(-10deg);
+        }
+        
+    }
 }
 
-.tertiary__heading {
-  font-family: customFont700, serif;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
+// .navigation__link {
+//   font-family: customFont600, sans-serif;
+//   color: var(--color-0010);
+//   font-size: 1.125rem;
+// }
 
-.text__color__graphic {
-  color: var(--color-003);
-}
+// .hero__primary__heading {
+//   font-family: CustomFont900, serif;
+//   color: var(--color-0010);
+//   // font-size: clamp(2.125rem, calc(2.499vw + 1.188rem), 3.438rem);
+//   // font-size: 4.376rem; // 70px
+//   // font-size: 2.125rem;
+//   font-size: clamp(2.125rem, calc(4.25vw + 0.656rem), 4.376rem);
+//   letter-spacing: 0.5rem;
+// }
 
-.text__color__photography {
-  color: var(--color-004);
-}
+// .secondary__heading {
+//   font-family: customFont700, serif;
+//   color: var(--color-006);
+//   // font-size: 2rem;
+//   font-size: clamp(1.125rem, calc(1.75vw + 0.469rem), 2rem);
+//   font-weight: bold;
+//   width: 65%;
+// }
 
-.text__message__product__001 {
-  color: var(--color-005);
-}
+// .text__message {
+//   font-family: customFont600, sans-serif;
+//   // font-size: 1.01rem;
+//   // font-size: 1.125rem;
+//   font-size: clamp(1rem, calc(0.25vw + 0.875rem), 1.125rem);
+//   color: var(--color-008);
+// }
 
-.text__message__product__002 {
-  color: var(--color-004);
-}
+// .text__message__services {
+//   width: 80%;
+// }
 
-.testimonial__heading {
-  text-transform: uppercase;
-  font-family: customFont700, serif;
-  letter-spacing: 5px;
-  font-size: 1.2rem;
-  color: var(--color-009);
-}
+// .secondary__heading,
+// .text__message__services {
+//   margin-bottom: 1.5rem;
+// }
 
-.text__message__quote {
-  color: var(--color-007);
-  width: 80%;
-}
+// .highlight__text__001,
+// .highlight__text__002 {
+//   font-family: customFont900, sans-serif;
+//   text-transform: uppercase;
+//   color: var(--color-006);
+// }
 
-.testimonial__name {
-  font-family: customFont700, serif;
-  color: var(--color-006);
-  margin-bottom: 0.5em;
-}
+// .tertiary__heading {
+//   font-family: customFont700, serif;
+//   font-size: 1.5rem;
+//   margin-bottom: 1rem;
+// }
 
-.testimonial__position {
-  font-family: customFont600, sans-serif;
-  font-size: 0.875rem;
-  color: var(--color-009);
-}
-// a {
+// .text__color__graphic {
+//   color: var(--color-003);
+// }
+
+// .text__color__photography {
+//   color: var(--color-004);
+// }
+
+// .text__message__product__001 {
+//   color: var(--color-005);
+// }
+
+// .text__message__product__002 {
+//   color: var(--color-004);
+// }
+
+// .testimonial__heading {
+//   text-transform: uppercase;
+//   font-family: customFont700, serif;
+//   letter-spacing: 5px;
+//   font-size: 1.2rem;
+//   color: var(--color-009);
+// }
+
+// .text__message__quote {
+//   color: var(--color-007);
+//   width: 80%;
+// }
+
+// .testimonial__name {
+//   font-family: customFont700, serif;
+//   color: var(--color-006);
+//   margin-bottom: 0.5em;
+// }
+
+// .testimonial__position {
+//   font-family: customFont600, sans-serif;
+//   font-size: 0.875rem;
+//   color: var(--color-009);
+// }
+// // a {
 //   font-size: 1.125rem;
 // }
 

@@ -1,20 +1,18 @@
-.u-text-center {
-  text-align: center;
-  // padding: 0 1.5rem;
+.u-text-center { text-align: center; }
+
+.mb-sm { margin-bottom: 1rem; }
+.mb-md { margin-bottom: 2rem; }
+.mb-lg { margin-bottom: 4rem; }
+.mb-xl { margin-bottom: 6rem; }
+
+.section--hidden { 
+  opacity: 0; 
+  transform: translateY(80%)
 }
 
-.section--hidden {
-  opacity: 0;
-  transform: translateY(80%);
-}
-
-.img__design {
-  width: 100%;
-  height: 100%;
-}
-
-.grid {
-  display: grid;
+.img__design { 
+  width: 100%; 
+  height: 100%; 
 }
 
 .visually-hidden {

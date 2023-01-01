@@ -1,0 +1,17 @@
+body {
+    min-height: 100vh;
+    background-color: var(--color-0010);
+  }
+  
+  .container {
+    display: grid;
+    grid-template-rows: 90vh repeat(3, 40vw) min-content 30vw min-content;
+    grid-template-columns:
+    [full-start] minmax(4rem, 1fr) [center-start] repeat(
+      6,
+      [col-start] minmax(min-content, 15rem) [col-end]
+      )
+      [center-end] minmax(4rem, 1fr) [full-end];
+
+    }
+  

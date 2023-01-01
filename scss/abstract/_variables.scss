@@ -9,4 +9,14 @@
   --color-008: hsl(232, 10%, 55%);
   --color-009: hsl(210, 4%, 67%);
   --color-0010: hsl(0, 0%, 100%);
+
+  --highlight--1: hsla(51, 79%, 62%, 0.568);
+  --highlight--2: hsla(7, 99%, 70%, 0.473);
+
 }
+
+// FONT SIZE
+$font-size-xs: clamp(0.938rem, calc(0.25vw + 0.875rem), 1.125rem);
+$font-size-sm: clamp(1.125rem, calc(0.75vw + 0.844rem), 1.5rem);
+$font-size-md: clamp(1.125rem, calc(1.75vw + 0.469rem), 2rem);
+
