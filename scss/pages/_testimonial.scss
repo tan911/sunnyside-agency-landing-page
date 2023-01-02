@@ -3,12 +3,18 @@
 .testimonial {
   grid-column: center-start / center-end;
 
+  border: 1px solid red;
+
   margin: 10rem 0;
 
   display: grid;
   grid-template-columns: repeat(3, minmax(min-content, 1fr));
   align-items: start;
   gap: 5rem;
+
+  @include queries.respond(phone) {
+    grid-template-columns: minmax(min-content, max-content);
+  }
 }
 
 .testimonial__heading {

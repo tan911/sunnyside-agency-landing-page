@@ -1,6 +1,7 @@
 @use '../abstract/mixin' as queries;
 
 .how {
+  // overflow: hidden;
 
   &__works {
       
@@ -11,48 +12,55 @@
       
         &--1 {
         grid-column: full-start / col-end 3;
-        padding: 4em 8vw;
+        // padding: 4em 8vw;
+
+        @include queries.respond(phone) {
+          grid-column: full-start / full-end;
+        }
     }
 
         &--2 {
         grid-column: col-start 4 / full-end;
-        padding: 4em 6vw;
+        // padding: 4em 6vw;
+
+        @include queries.respond(phone) {
+          grid-column: full-start / full-end;
+        }
     }
   }
 
   &__picture__001 {
+  border: 2px solid red;
     grid-column: col-start 4 / full-end;
+    overflow: hidden;
 
-    // background-image: url('../assets/images/desktop/image-transform.jpg');
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: center center;
-
-    // @include queries.respond(screen-md) {
-    //   background-image: url('../assets/images/mobile/image-transform.jpg');
-    // }
+    @include queries.respond(phone) {
+      grid-column: full-start / full-end;
+    }
   }
 
   &__picture__002 {
     grid-column: full-start / col-end 3;
-  
+    overflow: hidden;
 
-
-    // background-image: url('../assets/images/desktop/image-stand-out.jpg');
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: center center;
-  
-    // @include queries.respond(screen-md) {
-    //   background-image: url('../assets/images/mobile/image-stand-out.jpg');
-    // }
+    @include queries.respond(phone) {
+      grid-column: full-start / full-end;
+    }
   }
 
 }
 
 .image__picture {
   width: 100%;
+  // object-fit: cover;
 }
+
+// picture {
+//   border: 2px solid red;
+//   width: 100%;
+//   // overflow: hidden;
+//   // object-fit: contain;
+// }
 
 // .section__services {
 //   display: grid;

@@ -1,18 +1,23 @@
 @use '../abstract/mixin' as queries;
 
 .product {
-  grid-column: full-start / full-end;
+  // grid-column: full-start / full-end;
 
-  display: grid;
-  grid-template-columns: repeat(2, minmax(min-content, 1fr));
+  // display: grid;
+  // grid-template-columns: repeat(2, minmax(min-content, 1fr));
 
   // &__graphic,
   // &__photography {
   //   justify-self: flex-end;
   // }
 
+  // @include queries.respond(phone) {
+  //   grid-template-columns: 1fr;
+  // }
+
   &__graphic {
     // background-color: green;
+    grid-column: full-start / col-start 4;
 
     background-image: url('../assets/images/desktop/image-graphic-design.jpg');
     background-repeat: no-repeat;
@@ -26,8 +31,12 @@
     align-items: center;
     
     
-    padding: 0 13vw 3em 13vw;
+    // padding: 0 13vw 3em 13vw;
     // padding-bottom: 2em;
+
+    @include queries.respond(phone) {
+      grid-column: full-start / full-end;
+    }
     
     @include queries.respond(screen-sm) {
       background-image: url('../assets/images/mobile/image-graphic-design.jpg');
@@ -36,7 +45,7 @@
   }
 
   &__photography {
-    // grid-column: col-start 4 / full-end;
+    grid-column: col-start 4 / full-end;
 
     background-image: url('../assets/images/desktop/image-photography.jpg');
     background-repeat: no-repeat;
@@ -49,8 +58,12 @@
     justify-content: flex-end;
     align-items: center;
     
-    padding: 0 13vw 3em 13vw;
+    // padding: 0 13vw 3em 13vw;
     // padding-bottom: 2em;
+
+    @include queries.respond(phone) {
+      grid-column: full-start / full-end;
+    }
 
 
     @include queries.respond(screen-sm) {

@@ -1,17 +1,26 @@
 // QUERIES
 @mixin respond($breakpoint) {
 
+  //  600px
+@if $breakpoint == phone {
+  @media only screen and (max-width: 37.5rem) {
+    @content;
+  }
+}
+
+// 800px
 @if $breakpoint == screen-sm  {
   @media only screen and (max-width: 50em) {
     @content;
   }
 }
 
-  @if $breakpoint == screen-md {
-    @media only screen and (max-width: 56.25em) {
-      @content;
-    }
+@if $breakpoint == screen-md {
+  @media only screen and (max-width: 56.25em) {
+    @content;
   }
+}
+
 }
 
 // ANIMATION

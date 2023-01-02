@@ -1,5 +1,5 @@
-// // @use '../abstract/mixin' as animate;
-// // @use '../abstract/mixin' as queries;
+@use '../abstract/mixin' as animate;
+@use '../abstract/mixin' as queries;
 @use '../abstract/variables' as font;
 
 @font-face {
@@ -29,6 +29,11 @@
 
 .heading--1 {
     @extend %heading;
+    color: var(--color-0010);
+    font-size: clamp(2.125rem, calc(2.499vw + 1.188rem), 3.438rem);
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    @include animate.animate-heading;
 }
 
 
@@ -37,6 +42,7 @@
     font-size: font.$font-size-md;
     font-weight: 700;
     color: var(--color-006);
+    width: 70%
 }
 
 
@@ -84,6 +90,7 @@
     
     &__slate {
         color: var(--color-008);
+        width: 90%;
     }
 
     &__emerald {
@@ -97,6 +104,25 @@
     &__gray {
         color: var(--color-007);
     }
+}
+
+.nav__item__link:link,
+.nav__item__link:visited {
+    @extend %paragraph;
+    display: inline-block;
+    color: var(--color-0010);
+    font-size: font.$font-size-xs;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    @include queries.respond(screen-sm) {
+        color: var(--color-008);
+    }
+}
+
+.nav__item__link:hover,
+.nav__item__link:active {
+    color: var(--color--006)
 }
 
 
@@ -144,6 +170,28 @@
         }
         
     }
+}
+
+.footer__resources__link:link, 
+.footer__resources__link:visited {
+    @extend %paragraph;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--color-005);
+    transition: all 0.3s ease;
+}
+
+
+.footer__resources__link:hover,
+.footer__resources__link:active {
+    color: var(--color-0010);
+}
+
+
+
+.social__icon:active path,
+.social__icon:hover path {
+    fill: #eee;
 }
 
 // .navigation__link {

@@ -6,45 +6,53 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
+  @include queries.respond(phone) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   &__1,
   &__2,
   &__3,
   &__4 {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-  }
+    // object-fit: cover;
+    // border: 1px solid red;
 
-  &__1 {
-    background-image: url('../assets/images/desktop/image-gallery-milkbottles.jpg');
-
-    @include queries.respond(screen-sm) {
-      background-image: url('../assets/images/mobile/image-gallery-milkbottles.jpg');
+    & img,
+    & source {
+      object-fit: cover;
     }
   }
+
+  // &__1 {
+  //   background-image: url('../assets/images/desktop/image-gallery-milkbottles.jpg');
+
+  //   @include queries.respond(screen-sm) {
+  //     background-image: url('../assets/images/mobile/image-gallery-milkbottles.jpg');
+  //   }
+  // }
   
-  &__2 {
-    background-image: url('../assets/images/desktop/image-gallery-orange.jpg');
+  // &__2 {
+  //   background-image: url('../assets/images/desktop/image-gallery-orange.jpg');
 
-    @include queries.respond(screen-sm) {
-      background-image: url('../assets/images/mobile/image-gallery-orange.jpg');
-    }
-  }
+  //   @include queries.respond(screen-sm) {
+  //     background-image: url('../assets/images/mobile/image-gallery-orange.jpg');
+  //   }
+  // }
 
-  &__3 {
-    background-image: url('../assets/images/desktop/image-gallery-cone.jpg');
+  // &__3 {
+  //   background-image: url('../assets/images/desktop/image-gallery-cone.jpg');
 
-    @include queries.respond(screen-sm) {
-      background-image: url('../assets/images/mobile/image-gallery-cone.jpg');
-    }
-  }
+  //   @include queries.respond(screen-sm) {
+  //     background-image: url('../assets/images/mobile/image-gallery-cone.jpg');
+  //   }
+  // }
 
-  &__4 {
-    background-image: url('../assets/images/desktop/image-gallery-sugarcubes.jpg');
+  // &__4 {
+  //   background-image: url('../assets/images/desktop/image-gallery-sugarcubes.jpg');
 
-    @include queries.respond(screen-sm) {
-      background-image: url('../assets/images/mobile/image-gallery-sugar-cubes.jpg');
-    }
-  }
+  //   @include queries.respond(screen-sm) {
+  //     background-image: url('../assets/images/mobile/image-gallery-sugar-cubes.jpg');
+  //   }
+  // }
 }
 
