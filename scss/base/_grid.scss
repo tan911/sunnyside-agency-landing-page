@@ -1,28 +1,37 @@
 @use '../abstract/mixin' as queries;
 
-body {
-    min-height: 100vh;
-    background-color: var(--color-0010);
-    // overflow: hidden;
-  }
+
+.container {
+  display: grid;
+  grid-template-rows: 90vh minmax(min-content, 1fr) min-content;
+  // grid-template-columns: minmax(min-content, 1fr);
+}
+
+/////////////////////////
+
+// body {
+//     min-height: 100vh;
+//     background-color: var(--color-0010);
+//     // overflow: hidden;
+//   }
   
-  .container {
-    display: grid;
-    grid-template-rows: 95vh repeat(3, 40vw) min-content 30vw min-content;
-    grid-template-columns:
-    [full-start] minmax(4rem, 1fr) [center-start] repeat(
-      6,
-      [col-start] minmax(min-content, 15rem) [col-end]
-      )
-      [center-end] minmax(4rem, 1fr) [full-end];
+//   .container {
+//     display: grid;
+//     grid-template-rows: 95vh repeat(3, 40vw) min-content 30vw min-content;
+//     grid-template-columns:
+//     [full-start] minmax(4rem, 1fr) [center-start] repeat(
+//       6,
+//       [col-start] minmax(min-content, 15rem) [col-end]
+//       )
+//       [center-end] minmax(4rem, 1fr) [full-end];
 
-      @include queries.respond(phone) {
-        // grid-template-rows: 95vh repeat(4, 80vw) min-content 30vw min-content;
-        // grid-template-columns: 1fr;
+//       @include queries.respond(phone) {
+//         // grid-template-rows: 95vh repeat(4, 80vw) min-content 30vw min-content;
+//         // grid-template-columns: 1fr;
 
-        grid-template-rows: 90vh 50vh 50vh 50vh 50vh 80vh 80vh minmax(min-content, max-content) minmax(min-content, 50vh) min-content;
+//         grid-template-rows: 90vh 50vh 50vh 50vh 50vh 80vh 80vh minmax(min-content, max-content) minmax(min-content, 50vh) min-content;
 
-        grid-template-columns: minmax(min-content, 1fr);
-      }
-    }
+//         grid-template-columns: minmax(min-content, 1fr);
+//       }
+//     }
   
