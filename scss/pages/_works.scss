@@ -7,22 +7,16 @@
 
     @include queries.respond(phone) {
         grid-template-columns: minmax(min-content, 1fr);
+        grid-template-rows: minmax(min-content, max-content);
     }
 }
 
 .how__works {
+   
     
     &--1 {
-        // background-color: blue;
         grid-column: work-start / work-col-start 4;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-
         padding: 0 8vw;
-
         @include queries.respond(phone) {
             grid-row: 2 / 3;
         }
@@ -30,22 +24,32 @@
 
     &--2 {
         grid-column: work-col-start 4 / work-end;
+        padding: 0 6vw;
+        @include queries.respond(phone) {
+            grid-row: 4 / 5;
+        }
 
+    }
+
+    &--1,
+    &--2 {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
 
-        padding: 0 6vw;
-
-        // @include queries.respond(phone) {
-        //     grid-row: 4 / 5;
-        // }
+        @include queries.respond(phone) {
+            align-items: center;
+            text-align: center;
+            padding: 4rem 0;
+        }
     }
 
     &__picture-01 {
         grid-column: work-col-start 4 / work-end;
-        object-fit: cover;
+        @include queries.respond(phone) {
+            grid-row: 1 / 2;
+        }
     }
 
     &__picture-02 {
@@ -54,146 +58,7 @@
 }
 
 .thumbnail {
-    object-fit: cover;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-
-
-
-///////////////////////////
-/// // 
-// .how {
-//   // overflow: hidden;
-
-//   &__works {
-      
-//       display: flex;
-//       flex-direction: column;
-//       justify-content: center;
-//       align-items: flex-start;
-      
-//         &--1 {
-//         grid-column: full-start / col-end 3;
-//         // padding: 4em 8vw;
-
-//         @include queries.respond(phone) {
-//           grid-column: full-start / full-end;
-//         }
-//     }
-
-//         &--2 {
-//         grid-column: col-start 4 / full-end;
-//         // padding: 4em 6vw;
-
-//         @include queries.respond(phone) {
-//           grid-column: full-start / full-end;
-//         }
-//     }
-//   }
-
-//   &__picture__001 {
-//   border: 2px solid red;
-//     grid-column: col-start 4 / full-end;
-//     overflow: hidden;
-
-//     @include queries.respond(phone) {
-//       grid-column: full-start / full-end;
-//     }
-//   }
-
-//   &__picture__002 {
-//     grid-column: full-start / col-end 3;
-//     overflow: hidden;
-
-//     @include queries.respond(phone) {
-//       grid-column: full-start / full-end;
-//     }
-//   }
-
-// }
-
-// .image__picture {
-//   width: 100%;
-//   // object-fit: cover;
-// }
-
-//////////////////////////////////////////
-/// /// 
-
-// picture {
-//   border: 2px solid red;
-//   width: 100%;
-//   // overflow: hidden;
-//   // object-fit: contain;
-// }
-
-// .section__services {
-//   display: grid;
-//   grid-template-rows: 1fr 1fr;
-//   grid-template-columns: 1fr 1fr;
-
-//   @include queries.respond(screen-md) {
-//     grid-template-rows: 1fr;
-//     grid-template-columns: 1fr;
-
-//     .services__images__001 {
-//       grid-row: 1 / 2;
-//     }
-//   }
-// }
-
-// .services__info {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: flex-start;
-// }
-
-// .services__info .services__info__container__transform {
-//   padding: 0 2rem 0 8rem;
-//   // border: 1px solid red;
-// }
-
-// .services__info .services__info__container__standout {
-//   padding: 0 5rem 0 8rem;
-// }
-
-// .highlight__text__001 {
-//   text-decoration: none;
-//   position: relative;
-//   z-index: 2;
-
-//   &::before {
-//     /* Highlight color */
-//     background-color: rgba(235, 212, 83, 0.568);
-
-//     content: '';
-//     position: absolute;
-//     width: calc(100% + 10px);
-//     height: 45%;
-//     left: -2px;
-//     bottom: -2px;
-//     z-index: -1;
-//     transform: translateY(-10deg);
-//   }
-// }
-
-// .highlight__text__002 {
-//   text-decoration: none;
-//   position: relative;
-//   z-index: 2;
-
-//   &::before {
-//     /* Highlight color */
-//     background-color: rgba(254, 121, 103, 0.473);
-
-//     content: '';
-//     position: absolute;
-//     width: calc(100% + 10px);
-//     height: 45%;
-//     left: -2px;
-//     bottom: -2px;
-//     z-index: -1;
-//     transform: transform(-10deg);
-//   }
-// }
