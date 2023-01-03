@@ -1,6 +1,5 @@
 @use '../abstract/mixin' as animate;
 @use '../abstract/mixin' as queries;
-@use '../abstract/variables' as font;
 
 @font-face {
     font-family: customFont900;
@@ -30,25 +29,27 @@
 .heading--1 {
     @extend %heading;
     color: var(--color-0010);
-    font-size: clamp(2.125rem, calc(2.499vw + 1.188rem), 3.438rem);
+    font-size: var(--font-size-heading-1);
     text-transform: uppercase;
     letter-spacing: 1rem;
+    padding: 0;
     @include animate.animate-heading;
 }
 
 
 .heading--2 {
     @extend %heading;
-    font-size: font.$font-size-md;
+    font-size: var(--font-size-heading-2);
     font-weight: 700;
     color: var(--color-006);
-    width: 70%
+    width: 70%;
+
 }
 
 
 .heading--3 {
     @extend %heading;
-    font-size: font.$font-size-sm;
+    font-size: var(--font-size-heading-3);
 
     &__emerald {
         color: var(--color-003)
@@ -63,7 +64,7 @@
 
 .heading--4 {
     font-family: customFont700, serif;
-    font-size: 1.2rem;
+    font-size: var(--font-size-xs);
     color: var(--color-009);
     letter-spacing: 4px;
     text-transform: uppercase
@@ -73,32 +74,34 @@
 .heading--5 {
     @extend %heading;
     color: var(--color-006);
-    font-size: 1.0125rem
+    font-size: var(--font-size-xs);
 }
 
 
 .p-text-sm {
     @extend %paragraph;
     color: var(--color-009);
-    font-size: 0.938rem
+    font-size: var(--font-size-xs);
 }
 
 
 .p-text {
     @extend %paragraph;
-    font-size: font.$font-size-xs;
+    font-size: var(--font-p-text);
     
     &__slate {
         color: var(--color-008);
-        width: 90%;
+        width: 85%;
     }
 
     &__emerald {
         color: var(--color-003);
+        width: 90%;
     }
 
     &__dark {
         color: var(--color-006);
+        width: 90%;
     }
 
     &__gray {
@@ -111,11 +114,11 @@
     @extend %paragraph;
     display: inline-block;
     color: var(--color-0010);
-    font-size: font.$font-size-xs;
+    font-size: var(--font-size-sm);
     text-decoration: none;
     transition: all 0.3s ease;
 
-    @include queries.respond(screen-sm) {
+    @include queries.respond(phone) {
         color: var(--color-008);
     }
 }
@@ -130,9 +133,11 @@
 .highlight-text {
     @extend %heading;
     color: var(--color-006);
-    font-size: 0.938rem;
+    font-size: var(--font-size-xs);
+    letter-spacing: 1.5px;
     text-transform: uppercase;
     text-decoration: none;
+    z-index: 1;
 
     &__001 {
         position: relative;
@@ -176,7 +181,7 @@
 .footer__resources__link:visited {
     @extend %paragraph;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: var(--font-size-xs);
     color: var(--color-005);
     transition: all 0.3s ease;
 }
@@ -194,113 +199,3 @@
     fill: #eee;
 }
 
-// .navigation__link {
-//   font-family: customFont600, sans-serif;
-//   color: var(--color-0010);
-//   font-size: 1.125rem;
-// }
-
-// .hero__primary__heading {
-//   font-family: CustomFont900, serif;
-//   color: var(--color-0010);
-//   // font-size: clamp(2.125rem, calc(2.499vw + 1.188rem), 3.438rem);
-//   // font-size: 4.376rem; // 70px
-//   // font-size: 2.125rem;
-//   font-size: clamp(2.125rem, calc(4.25vw + 0.656rem), 4.376rem);
-//   letter-spacing: 0.5rem;
-// }
-
-// .secondary__heading {
-//   font-family: customFont700, serif;
-//   color: var(--color-006);
-//   // font-size: 2rem;
-//   font-size: clamp(1.125rem, calc(1.75vw + 0.469rem), 2rem);
-//   font-weight: bold;
-//   width: 65%;
-// }
-
-// .text__message {
-//   font-family: customFont600, sans-serif;
-//   // font-size: 1.01rem;
-//   // font-size: 1.125rem;
-//   font-size: clamp(1rem, calc(0.25vw + 0.875rem), 1.125rem);
-//   color: var(--color-008);
-// }
-
-// .text__message__services {
-//   width: 80%;
-// }
-
-// .secondary__heading,
-// .text__message__services {
-//   margin-bottom: 1.5rem;
-// }
-
-// .highlight__text__001,
-// .highlight__text__002 {
-//   font-family: customFont900, sans-serif;
-//   text-transform: uppercase;
-//   color: var(--color-006);
-// }
-
-// .tertiary__heading {
-//   font-family: customFont700, serif;
-//   font-size: 1.5rem;
-//   margin-bottom: 1rem;
-// }
-
-// .text__color__graphic {
-//   color: var(--color-003);
-// }
-
-// .text__color__photography {
-//   color: var(--color-004);
-// }
-
-// .text__message__product__001 {
-//   color: var(--color-005);
-// }
-
-// .text__message__product__002 {
-//   color: var(--color-004);
-// }
-
-// .testimonial__heading {
-//   text-transform: uppercase;
-//   font-family: customFont700, serif;
-//   letter-spacing: 5px;
-//   font-size: 1.2rem;
-//   color: var(--color-009);
-// }
-
-// .text__message__quote {
-//   color: var(--color-007);
-//   width: 80%;
-// }
-
-// .testimonial__name {
-//   font-family: customFont700, serif;
-//   color: var(--color-006);
-//   margin-bottom: 0.5em;
-// }
-
-// .testimonial__position {
-//   font-family: customFont600, sans-serif;
-//   font-size: 0.875rem;
-//   color: var(--color-009);
-// }
-// // a {
-//   font-size: 1.125rem;
-// }
-
-// h1 {
-//   margin-top: 1em;
-//   margin-bottom: 1.7em;
-//   color: var(--color-0010);
-//   font-family: customFont900, serif;
-//   letter-spacing: 0.5rem;
-//   @include animate.animate-heading;
-// }
-
-// font-size: clamp(0.938rem, calc(0.357vw + 0.804rem), 1.125rem);
-// font-size: clamp(1.125rem, calc(3.808vw + 0.527rem), 3.438rem);
