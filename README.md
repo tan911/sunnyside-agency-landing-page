@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Code](https://github.com/tan911/sunnyside-agency-landing-page)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live site](https://tan911.github.io/sunnyside-agency-landing-page/)
 
 ## My process
 
