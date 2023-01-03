@@ -14,21 +14,21 @@
 .product__graphic {
     grid-column: product-start / product-col-start 4;
 
-    background-image: url('../assets/images/desktop/image-graphic-design.jpg');
+    background-image: url('./assets/images/desktop/image-graphic-design.jpg');
 
 
     @include queries.respond(phone) {
-        background-image: url('../assets/images/mobile/image-graphic-design.jpg');
+        background-image: url('./assets/images/mobile/image-graphic-design.jpg');
     }
 }
 
 .product__photography {
     grid-column: product-col-start 4 / product-end;
 
-    background-image: url('../assets/images/desktop/image-photography.jpg');
+    background-image: url('./assets/images/desktop/image-photography.jpg');
 
     @include queries.respond(phone) {
-        background-image: url('../assets/images/mobile/image-photography.jpg');
+        background-image: url('./assets/images/mobile/image-photography.jpg');
     }
 }
 
