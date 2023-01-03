@@ -3,8 +3,17 @@
 
 .container {
   display: grid;
-  grid-template-rows: 90vh minmax(min-content, 1fr) min-content;
+  grid-template-rows: 100vh minmax(min-content, 1fr) min-content;
   // grid-template-columns: minmax(min-content, 1fr);
+
+  @include queries.respond(phone) {
+    grid-template-rows: 80vh minmax(min-content, 1fr) min-content;
+  }
+
+  @include queries.respond(phone-sm) {
+    grid-template-rows: minmax(min-content, 1fr) minmax(min-content, 1fr) min-content;
+  }
+
 }
 
 /////////////////////////
