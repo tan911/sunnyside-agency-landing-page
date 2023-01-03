@@ -3,13 +3,13 @@
 
 
 .header {
-  background-image: url('../../assets/images/desktop/image-header.jpg');
+  background-image: url('../assets/images/desktop/image-header.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 
   @include queries.respond(phone) {
-    background-image: url('../../assets/images/mobile/image-header.jpg');
+    background-image: url('../assets/images/mobile/image-header.jpg');
   }
 }
 
