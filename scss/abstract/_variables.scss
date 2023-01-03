@@ -13,10 +13,15 @@
   --highlight--1: hsla(51, 79%, 62%, 0.568);
   --highlight--2: hsla(7, 99%, 70%, 0.473);
 
+
+  --font-size-heading-1: clamp(1.6rem, calc(2.8vw + 0.55rem), 3rem);
+  --font-size-heading-2: clamp(1.7rem, calc(0.6vw + 1.475rem), 2.5rem);
+  --font-size-heading-3: clamp(1.7rem, calc(0.6vw + 1.475rem), 2.5rem);
+
+  --font-p-text: clamp(1.125rem, calc(0.75vw + 0.813rem), 1.5rem);
+  --font-size-xs: clamp(0.938rem, calc(0.25vw + 0.875rem), 1.125rem);
+  --font-size-sm: clamp(1.125rem, calc(0.75vw + 0.844rem), 1.5rem);
+  --font-size-md: clamp(1.125rem, calc(1.75vw + 0.469rem), 2rem);
 }
 
-// FONT SIZE
-$font-size-xs: clamp(0.938rem, calc(0.25vw + 0.875rem), 1.125rem);
-$font-size-sm: clamp(1.125rem, calc(0.75vw + 0.844rem), 1.5rem);
-$font-size-md: clamp(1.125rem, calc(1.75vw + 0.469rem), 2rem);
 
