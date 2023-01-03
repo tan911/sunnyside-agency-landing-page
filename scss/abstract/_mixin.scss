@@ -1,9 +1,15 @@
 // QUERIES
 @mixin respond($breakpoint) {
 
-  //  600px
+  @if $breakpoint == phone-sm {
+    @media only screen and (max-width: 26.25rem) {
+      @content;
+    }
+  }
+
+  //  950px
 @if $breakpoint == phone {
-  @media only screen and (max-width: 37.5rem) {
+  @media only screen and (max-width: 59.375rem) {
     @content;
   }
 }
