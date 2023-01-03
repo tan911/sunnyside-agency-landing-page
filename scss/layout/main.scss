@@ -5,9 +5,10 @@
 
     display: grid;
     grid-template-columns: minmax(min-content, 1fr);
-    grid-template-rows: minmax(min-content, max-content) 80vh min-content min-content;
+    grid-template-rows: minmax(min-content, max-content) minmax(max-content, max-content) min-content min-content;
 
+    // minmax(max-content, 14rem)
     @include queries.respond(phone) {
-        grid-template-rows: minmax(min-content, max-content) 90vh min-content min-content;
+        grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content) min-content min-content;
     }
 }
