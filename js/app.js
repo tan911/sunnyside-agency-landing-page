@@ -1,8 +1,7 @@
 'use strict';
 
-const hambugerMenuBtn = document.querySelector('.navigation__hamburger__menu');
-const menu = document.querySelector('.navigation__list');
-
-hambugerMenuBtn.addEventListener('click', () => {
-  menu.classList.toggle('hidden');
-});
+const hamburgerBtn = document.querySelector('.hamburger__btn');
+const menu = document.querySelector('.nav')
+hamburgerBtn.addEventListener('click', () => {
+  menu.classList.toggle('display')
+})
