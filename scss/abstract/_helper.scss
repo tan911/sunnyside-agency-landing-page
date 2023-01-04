@@ -5,19 +5,19 @@
 .mb-lg { margin-bottom: 4rem; }
 .mb-xl { margin-bottom: 6rem; }
 
-.section--hidden { 
+.reveal {
+  transition: transform 0.8s ease-out, opacity 1s ease-out;
+}
+
+.item--hidden { 
   opacity: 0; 
-  transform: translateY(80%)
+  transform: translateY(40%);
 }
 
 .img__design { 
   width: 100%; 
   height: 100%; 
 }
-
-// .hidden {
-//   display: none;
-// }
 
 .visually-hidden {
   clip: rect(0 0 0 0);
