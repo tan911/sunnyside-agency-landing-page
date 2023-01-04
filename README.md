@@ -26,7 +26,6 @@ Users should be able to:
 ### Screenshot
 
 ![](./screenshot/desktop.png)
-![](./screenshot/mobile.png)
 
 
 ### Links
@@ -50,7 +49,7 @@ Users should be able to:
 
 ### What I learned
 
-Trial and error led me to my ultimate solution for this challenge, but the most crucial part is that I learnt a lot while developing it, especially about using a grid for layout then use Flex for one-dimensional layout. Note! This is my second challenge that focuses on a grid system (it's tough, but the grid helps 😂), My first challenges [grid challenge](https://tan911.github.io/testimonial-grid-section/) This challenge is more difficult than my first one, but it is still useful if you want to gauge your understanding of basic layout principles. Therefore, I urge you to take up this challenge. [testimonial grid section](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7). 
+Trial and error led me to my ultimate solution for this challenge, but the most crucial part is that I learnt a lot while developing it, especially about using a grid for layout then use Flex for one-dimensional layout. Note! This is my second challenge that focuses on a grid system (it's tough, but the grid helps 😂), My [first grid challenges](https://tan911.github.io/testimonial-grid-section/). This challenge is more difficult than my first one, but it is still useful if you want to gauge your understanding of basic layout principles. Therefore, I urge you to take up this [Challenge](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7). 
 
 
 Now, let's walk through this approach and how I end up with this solution
